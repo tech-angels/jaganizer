@@ -1,0 +1,18 @@
+development:
+  site: 'jagan.dev'
+  js_url: 'http://jagan.dev/1.12/pusher.min.js'
+  app_id: '' # Your Jagan application ID
+  key: ''    # Your Jagan application key
+  secret: '' # Your Jagan application secret
+
+test:
+  site: ''
+  app_id: ''
+  key: ''
+  secret: ''
+
+production:
+  site: ''
+  app_id: ''
+  key: ''
+  secret: ''

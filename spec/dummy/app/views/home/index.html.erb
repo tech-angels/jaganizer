@@ -1,0 +1,43 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<%= link_to "Unstubbed version", unstubbed_path %>
+<% channel_name = "chatroom" %>
+<%= jaganizer_widget(channel_name) %>
+
+<script>window.ALLOW_PUSHER_OVERRIDE = true;</script>
+<script src="pusher-test-stub/build/bin/pusher-test-stub.js"></script>
+<script type="text/javascript">
+  // Overwrite this function because the subscription_succeeded event is triggered too soon.
+  jaganizer.subscription_succeeded = function(users) {
+    if(typeof users === "undefined") {
+      users = Pusher.instances[0].channel('presence-<%= channel_name %>').members;
+    }
+    users.each(jaganizer.add_member);
+    jaganizer.load_logs();
+  }
+
+  $(function(){
+    var stub = Pusher.instances[0];
+    var channel = stub.channel('presence-<%= channel_name %>');
+
+    var current_user = {
+      "id": 12345,
+      "info": {
+        "username" : "Stubbed user",
+        "avatar" : "http://placekitten.com/30/30",
+        "details" : "Stubbed details"
+      }
+    }
+
+    // Add a members to the room
+    channel.members.add(current_user);
+
+    // Stub form submitting
+    $('#jaganizer_chatbox').submit(function(e){
+      channel.emit('talk_event', {'id' : 123456789, 'user_id': current_user.id, 'message':'Stubbed message !', 'timestamp': Math.round(Date.now()/1000), 'user_info': current_user});
+    });
+    $('#jaganizer_updater').submit(function(e){
+      channel.emit('update_event', {'updated_message_id': 987654321, 'original_message_id': 123456789, 'message': 'Updated stubbed message !'});
+    });
+  });
+</script>

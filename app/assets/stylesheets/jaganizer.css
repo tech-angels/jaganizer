@@ -1,0 +1,130 @@
+#jaganizer {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: transparent url('jaganizer/bar_bg.jpg') repeat-x left top;
+}
+.jaganizer_container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.jaganizer_chatroom_link {
+  display: block;
+  float: right;
+  color: #939999;
+  text-decoration: none;
+  border-right: 1px solid #858585;
+   border-left: 1px solid #404040;
+}
+.jaganizer_chatroom_link span {
+  display: block;
+  padding: 0 20px;
+  line-height: 40px;
+  border-right: 1px solid #404040;
+   border-left: 1px solid #858585;
+}
+.jaganizer_chatroom {
+  width: 320px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background-color: #262626;
+  color: #d0d0d0;  
+  -webkit-box-shadow: 0px 0px 50px 0px #a1a1a1;
+          box-shadow: 0px 0px 50px 0px #a1a1a1;
+
+}
+#jaganizer ul, #jaganizer p, #jaganizer h6 { margin: 0; }
+#jaganizer ul {
+  list-style: none;
+  padding: 10px;
+}
+#jaganizer h6 {
+  font-size: 14px;
+  line-height: 30px;
+  color: #262626;
+  padding-left: 10px;
+  background: transparent url('jaganizer/header_bg.jpg') repeat-x left top;
+}
+.jaganizer_users ul {
+  max-height:180px;
+  overflow-y: scroll;
+}
+.jaganizer_avatar {
+  display:block;
+  float: left;
+  padding-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.jaganizer_user_info {
+  margin: 10px 0;
+}
+.jaganizer_username {
+  font-weight: bold;
+}
+.jaganizer_userdetails {
+  color: #999999;
+}
+.jaganizer_time {
+  line-height: 30px;
+  float: right;
+  display: block;
+  font-size: 0.9em;
+  color: #999;
+}
+.jaganizer_messages ul {
+  max-height: 280px;
+  overflow-y: scroll;
+}
+.jaganizer_chat_message .jaganizer_username {
+  line-height: 30px;
+}
+.jaganizer_chat_message.log {
+  color: #999999;
+  font-size: 0.9em;
+}
+#jaganizer .jaganizer_message {
+  margin: 13px 0;
+  word-wrap: break-word;
+}
+#jaganizer .log .jaganizer_message {
+  margin: 3px 0;
+}
+.jaganizer_messages hr {
+  margin: 10px 0;
+  border: 0;
+  height: 1px;
+  background-color: #999999;
+}
+#jaganizer form {
+  padding: 10px;
+}
+#jaganizer textarea {
+  resize: none;
+  box-sizing: border-box;
+  width: 300px;
+  height: 70px;
+}
+
+#jaganizer_updater {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  background-color: #262626;
+}
+#jaganizer_updater .close {
+  text-decoration: none;
+  color: #D0D0D0;
+  float: right;
+  font-size: 1.2em;
+}
+
+/* Helper classes */
+.jaganizer_clearfix { *zoom: 1; }
+.jaganizer_clearfix:before, .jaganizer_clearfix:after { display: table; content: ""; }
+.jaganizer_clearfix:after { clear: both; }
