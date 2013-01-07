@@ -17,7 +17,6 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 require 'webmock/rspec'
 require 'jaganizer'
 require 'capybara-webkit'
-require 'database_cleaner'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -32,18 +31,6 @@ RSpec.configure do |config|
 
   Capybara.default_wait_time = 15
   Capybara.javascript_driver = :webkit
-
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
 
   WebMock.disable_net_connect!(:allow_localhost => true)
 end
