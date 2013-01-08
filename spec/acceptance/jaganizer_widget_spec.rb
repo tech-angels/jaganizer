@@ -15,8 +15,12 @@ feature "Jaganizer widget" do
   end
 
   context "with javascript activated", :js => true do
-    scenario "clicking on 'chatroom' opens the chatroom" do
+    before :each do
       click_link('Chatroom')
+      wait_until { page.find(".jaganizer_chatroom").visible? }
+    end
+
+    scenario "clicking on 'chatroom' opens the chatroom" do
       page.should have_selector ".jaganizer_chatroom", visible: true
     end
 
