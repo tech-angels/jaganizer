@@ -63,3 +63,10 @@ Your method `get_user_infos` should always set the two variables `@user_id` and 
 * `@user` should be a **hash** with the optional keys `:username`, `:avatar`, `:details`.  
 We recommend you specify at least the username of the user
   * `:avatar` is the URL of a squared image. Default dimensions are 30px &times; 30px.
+
+Contributing
+------------
+### Initialize your development environment
+Clone this repository and then run
+
+    bundle exec rake jaganizer:init
