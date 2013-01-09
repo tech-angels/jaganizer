@@ -1,6 +1,8 @@
 Jaganizer 
 =========
 
+[![Dependency Status](https://gemnasium.com/tech-angels/jaganizer.png)](https://gemnasium.com/tech-angels/jaganizer)
+
 Jaganizer is a gem to jaganize your Rails application.
 Thanks to jaganizer, you'll be able to add a chat widget using one of your Jagan [http://jagan.io](http://jagan.io) applications.
 
