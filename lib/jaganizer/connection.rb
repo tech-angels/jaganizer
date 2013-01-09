@@ -3,8 +3,8 @@ require 'net/https'
 module Jaganizer
   class Connection
     def initialize
-      @connection = Net::HTTP.new(Jaganizer.config[:site], 80)
-      @connection.use_ssl = false
+      @connection = Net::HTTP.new(Jaganizer.config[:site], Jaganizer.config[:use_ssl] ? 443 : 80)
+      @connection.use_ssl = Jaganizer.config[:use_ssl]
     end
 
     def post(path, params)

@@ -1,7 +1,9 @@
 require "hmac-sha2"
 
 def jaganizer_url_for(path)
-  "http://#{Jaganizer.config[:app_id]}:#{Jaganizer.config[:secret]}@#{Jaganizer.config[:site]}/apps/#{Jaganizer.config[:app_id]}/#{path}"
+  protocol = Jaganizer.config[:use_ssl] ? 'https' : 'http'
+  
+  "#{protocol}://#{Jaganizer.config[:app_id]}:#{Jaganizer.config[:secret]}@#{Jaganizer.config[:site]}/apps/#{Jaganizer.config[:app_id]}/#{path}"
 end
 
 def body_regexp_for(request_type)

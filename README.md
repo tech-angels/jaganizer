@@ -69,7 +69,17 @@ We recommend you specify at least the username of the user
 
 Contributing
 ------------
-### Initialize your development environment
-Clone this repository and then run
+1. Fork it
+2. Run `bundle exec rake jaganizer:init`
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
-    bundle exec rake jaganizer:init
+
+Credits
+------
+
+Sergei Karamazov © Tech-Angels - http://www.tech-angels.com/
+
+[![Tech-Angels](http://media.tumblr.com/tumblr_m5ay3bQiER1qa44ov.png)](http://www.tech-angels.com)

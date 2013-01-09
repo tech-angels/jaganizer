@@ -1,5 +1,6 @@
 development:
   site: 'jagan.dev'
+  use_ssl: true
   js_url: 'http://jagan.dev/1.12/pusher.min.js'
   app_id: '1' # Your Jagan application ID
   key: 'your_key_goes_here'    # Your Jagan application key
@@ -7,6 +8,7 @@ development:
 
 test:
   site: 'jagan.dev'
+  use_ssl: true
   js_url: 'http://jagan.dev/1.12/pusher.min.js'
   app_id: '1'
   key: 'your_key_goes_here'
@@ -14,6 +16,7 @@ test:
 
 production:
   site: ''
+  use_ssl: true
   js_url: ''
   app_id: ''
   key: ''
