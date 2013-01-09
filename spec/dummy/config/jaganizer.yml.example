@@ -1,18 +1,20 @@
 development:
   site: 'jagan.dev'
   js_url: 'http://jagan.dev/1.12/pusher.min.js'
-  app_id: '' # Your Jagan application ID
-  key: ''    # Your Jagan application key
-  secret: '' # Your Jagan application secret
+  app_id: '1' # Your Jagan application ID
+  key: 'your_key_goes_here'    # Your Jagan application key
+  secret: 'your_secret_goes_here' # Your Jagan application secret
 
 test:
-  site: ''
-  app_id: ''
-  key: ''
-  secret: ''
+  site: 'jagan.dev'
+  js_url: 'http://jagan.dev/1.12/pusher.min.js'
+  app_id: '1'
+  key: 'your_key_goes_here'
+  secret: 'your_secret_goes_here'
 
 production:
   site: ''
+  js_url: ''
   app_id: ''
   key: ''
   secret: ''
