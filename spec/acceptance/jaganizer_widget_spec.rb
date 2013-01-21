@@ -17,7 +17,6 @@ feature "Jaganizer widget" do
   context "with javascript activated", :js => true do
     before :each do
       click_link('Chatroom')
-      wait_until { page.find(".jaganizer_chatroom").visible? }
     end
 
     scenario "clicking on 'chatroom' opens the chatroom" do
@@ -34,14 +33,14 @@ feature "Jaganizer widget" do
 
     context 'sending an empty message' do
       scenario 'do nothing' do
-        fill_in 'message', :with => "\r"
+        find('#message').set "\r"
         page.should_not have_selector ".jaganizer_messages li:not[log]"
       end
     end
 
     context 'sending a non empty message' do
       before :each do
-        fill_in 'message', :with => "Stubbed message !\r"
+        find('#message').set "Stubbed message !\r"
         @message = page.find(".jaganizer_messages li:last-child .jaganizer_message")
       end
 
@@ -61,8 +60,8 @@ feature "Jaganizer widget" do
 
     context 'updating a message' do
       before :each do
-        fill_in 'message', :with => "Stubbed message !\r"
-        fill_in 'updated_message', :with => "Updated stubbed message !\r"
+        find('#message').set "Stubbed message !\r"
+        find('#updated_message').set "Updated stubbed message !\r"
         @updated_message = page.find('.jaganizer_messages li:last-child .jaganizer_message')
       end
 
