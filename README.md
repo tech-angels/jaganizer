@@ -1,6 +1,9 @@
 Jaganizer 
 =========
 
+[![Dependency Status](https://gemnasium.com/tech-angels/jaganizer.png)](https://gemnasium.com/tech-angels/jaganizer)
+[![Build Status](https://travis-ci.org/tech-angels/jaganizer.png?branch=master)](https://travis-ci.org/tech-angels/jaganizer)
+
 Jaganizer is a gem to jaganize your Rails application.
 Thanks to jaganizer, you'll be able to add a chat widget using one of your Jagan [http://jagan.io](http://jagan.io) applications.
 
@@ -73,9 +76,10 @@ Contributing
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
 
-Credit
+
+Credits
 ------
 
-Copyright Tech-Angels - http://www.tech-angels.com/
+Sergei Karamazov © Tech-Angels - http://www.tech-angels.com/
 
 [![Tech-Angels](http://media.tumblr.com/tumblr_m5ay3bQiER1qa44ov.png)](http://www.tech-angels.com)
