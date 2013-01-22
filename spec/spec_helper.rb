@@ -16,7 +16,6 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 require 'webmock/rspec'
 require 'jaganizer'
-require 'capybara-webkit'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -30,7 +29,6 @@ RSpec.configure do |config|
   config.order = 'random'
 
   Capybara.default_wait_time = 15
-  Capybara.javascript_driver = :webkit
 
   WebMock.disable_net_connect!(:allow_localhost => true)
 end
