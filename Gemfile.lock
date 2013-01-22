@@ -44,9 +44,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
-    capybara-webkit (0.14.1)
-      capybara (~> 2.0, >= 2.0.2)
-      json
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     crack (0.3.2)
@@ -136,7 +133,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara-webkit
+  capybara
   jaganizer!
   jquery-rails
   rspec-rails
