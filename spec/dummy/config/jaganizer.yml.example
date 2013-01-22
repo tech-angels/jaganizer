@@ -9,7 +9,7 @@ development:
 test:
   site: 'jagan.dev'
   use_ssl: true
-  js_url: 'http://jagan.dev/1.12/pusher.min.js'
+  js_url: ''
   app_id: '1'
   key: 'your_key_goes_here'
   secret: 'your_secret_goes_here'
