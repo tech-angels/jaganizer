@@ -54,13 +54,15 @@ feature "Jaganizer widget" do
 
       scenario 'the message should appears in updater form' do
         page.find('#jaganizer_updater input').value.should == @message[:id]
-        page.find('#jaganizer_updater textarea').value.should == "Stubbed message !\n"
+        page.find('#jaganizer_updater textarea').value.should == "Stubbed message !"
       end
     end
 
     context 'updating a message' do
       before :each do
-        find('#message').set "Stubbed message !\r"
+        textarea = find('#message')
+        textarea.set "Stubbed message !\r"
+        textarea.native.send_keys :arrow_up
         find('#updated_message').set "Updated stubbed message !\r"
         @updated_message = page.find('.jaganizer_messages li:last-child .jaganizer_message')
       end
@@ -71,7 +73,7 @@ feature "Jaganizer widget" do
 
       scenario 'The updated message should appears in updater form' do
         page.find('#jaganizer_updater input').value.should == @updated_message[:id]
-        page.find('#jaganizer_updater textarea').value.should == "Updated stubbed message !\n"
+        page.find('#jaganizer_updater textarea').value.should == "Updated stubbed message !"
       end
     end
   end
